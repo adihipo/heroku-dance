@@ -25,6 +25,11 @@ window.addEventListener('keyup', function(e) {
    }
 });
 
+window.addEventListener('touchend', function(e) {
+  const music = document.getElementsByClassName('music')[0];
+  changeMusic(music);
+});
+
 function changeImage(element, origin) {
   let src = element.getAttribute("src");
   if(src == origin + ".png") {
