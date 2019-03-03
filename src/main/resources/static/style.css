@@ -19,6 +19,7 @@ html, body {
 
 .pic h1 {
   position: absolute;
+  font-size: 30px;
   margin-left: 20px;
   color: white;
 }
@@ -62,7 +63,15 @@ img {
   position: absolute;
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-device-width: 600px) {
+  .pic {
+    height: 200px;
+  }
+
+  .pic h1 {
+    font-size: 100px;
+  }
+
   .content {
     width: 80%;
   }
@@ -70,4 +79,14 @@ img {
   p, span, a {
     font-size: 50px;
   }
+
+  .dance {
+    margin-top: 350px;
+  }
+
+  .dance, img {
+    width: 800px;
+    height: 800px;
+  }
+
 }
