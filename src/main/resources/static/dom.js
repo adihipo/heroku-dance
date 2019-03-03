@@ -25,14 +25,28 @@ window.addEventListener('keyup', function(e) {
    }
 });
 
+window.addEventListener('touchstart', function(e) {
+  if(Math.floor(Math.random() * 10) < 6) {
+    const base = document.getElementsByClassName('base')[0];
+    changeImage(base, "base");
+  }
+  if(Math.floor(Math.random() * 10) < 6) {
+     const tail = document.getElementsByClassName('tail')[0];
+     changeImage(tail, "tail");
+  }
+  if(Math.floor(Math.random() * 10) < 6) {
+     const right = document.getElementsByClassName('right')[0];
+     changeImage(right, "right");
+  }
+  if(Math.floor(Math.random() * 10) < 6) {
+     const left = document.getElementsByClassName('left')[0];
+     changeImage(left, "left");
+  }
+});
+
 window.addEventListener('touchmove', function(e) {
   const music = document.getElementsByClassName('music')[0];
   changeMusic(music);
-});
-
-window.addEventListener('touchstart', function(e) {
-  const base = document.getElementsByClassName('base')[0];
-  changeImage(base, "base");
 });
 
 function changeImage(element, origin) {
