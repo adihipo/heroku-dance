@@ -25,9 +25,14 @@ window.addEventListener('keyup', function(e) {
    }
 });
 
-window.addEventListener('touchend', function(e) {
+window.addEventListener('touchmove', function(e) {
   const music = document.getElementsByClassName('music')[0];
   changeMusic(music);
+});
+
+window.addEventListener('touchstart', function(e) {
+  const base = document.getElementsByClassName('base')[0];
+  changeImage(base, "base");
 });
 
 function changeImage(element, origin) {
